@@ -56,7 +56,7 @@ console.log(restaEdades);
 console.log(productoEdades);
 console.log(divisionEdades);
  */
-/* 
+
 let alumno = {
   edad: 24,
   sexo: "M",
@@ -191,19 +191,19 @@ if (usuario.edad >= 18 && usuario.altura >= 150 && usuario.vision >= 8) {
 
 //EJ 7
 let persona = {
-  nombre: prompt("Ingresa tu nombre.").toLowerCase,
+  nombre: prompt("Ingresa tu nombre.").toLowerCase(),
   pase: prompt("Ingrese su pase (vip/normal)."),
   entrada: null,
 };
 
-if (prompt("Tiene entrada (si/no)").toLowerCase === "si") {
+if (prompt("Tiene entrada (si/no)").toLowerCase() === "si") {
   persona.entrada = true;
 } else {
   persona.entrada = false;
 }
 
 if (persona.entrada) {
-  if (prompt("Desea usar la entrada?").toLowerCase === "no") {
+  if (prompt("Desea usar la entrada?").toLowerCase() === "no") {
     persona.entrada = false;
   }
 }
@@ -300,7 +300,7 @@ if (player1 !== "papel" || player1 !== "piedra" || player1 !== "tijeras") {
 }
 
 //EJ 11
-let color = prompt("Ingrese un color").toLowerCase;
+let color = prompt("Ingrese un color").toLowerCase();
 
 switch (color) {
   case "blanco":
@@ -328,27 +328,32 @@ switch (color) {
     console.log("Buena eleccion no lo teniamos pensado");
     break;
 }
- */
+
 //EJ 12
 let valor1 = Number(prompt("Ingrese el primer valor", 6));
-let valor2 = Number(prompt("Ingrese el segundo valor", 3));
+let valor2 = parseInt(prompt("Ingrese el segundo valor", 3), 10);
 let operador = prompt(
   "Que operacion desea realizar (suma/resta/multiplicacion/division)",
   "suma"
-);
+).toLowerCase();
+let resultad;
 switch (operador) {
   case "suma":
-    console.log("Resultado: " + valor1 + valor2);
+    resultado = valor1 + valor2;
+    console.log("Resultado: " + resultado);
     break;
   case "resta":
-    console.log("Resultado: " + valor1 - valor2);
+    resultado = valor1 - valor2;
+    console.log("Resultado: " + resultado);
     break;
   case "multiplicacion":
-    console.log("Resultado: " + valor1 * valor2);
+    resultado = valor1 * valor2;
+    console.log("Resultado: " + resultado);
     break;
   case "division":
+    resultado = valor1 / valor2;
     if (valor2 !== 0) {
-      console.log("Resultado: " + valor1 / valor2);
+      console.log("Resultado: " + resultado);
     } else {
       console.log("ERROR. No se puede dividir por 0");
     }

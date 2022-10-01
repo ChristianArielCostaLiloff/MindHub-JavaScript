@@ -215,7 +215,7 @@ if (
 ) {
   console.log("Bienvenido");
 } else {
-  if (prompt("Desea comprar una entrada? $1000").toLowerCase === "si") {
+  if (prompt("Desea comprar una entrada? $1000").toLowerCase() === "si") {
     if (parseInt(prompt("Ingrese el dinero disponible")) >= 1000) {
       console.log("Se adquirio una entrada. Bienvenido");
     } else {
@@ -278,8 +278,8 @@ if (edad >= 0 && edad <= 12) {
 
 //EJ 10
 console.log("Piedra papel o tijeras 2 jugadores");
-let player1 = prompt("Jugador 1:").toLowerCase;
-let player2 = prompt("Jugador 2:").toLowerCase;
+let player1 = prompt("Jugador 1:").toLowerCase();
+let player2 = prompt("Jugador 2:").toLowerCase();
 
 if (player1 !== "papel" || player1 !== "piedra" || player1 !== "tijeras") {
   console.log("¡El jugador 1 hizo trampa!");
@@ -362,14 +362,14 @@ switch (operador) {
     console.log("Weon");
     break;
 }
-/* 
+
 //EJ 13
 let nomb = prompt("Indique su nombre");
 let ape = prompt("Indique su apellido");
 let dni = prompt("Indique su edad");
 
 console.log("Nombre: " + nomb + "\nApellido: " + ape + "\nDNI:" + dni);
-if (prompt("¿Son correcto los datos?").toLowerCase === "si") {
+if (prompt("¿Son correcto los datos?").toLowerCase() === "si") {
   let DNI = {
     nombre: nomb,
     apellido: ape,
@@ -379,4 +379,3 @@ if (prompt("¿Son correcto los datos?").toLowerCase === "si") {
 } else {
   console.log("Datos incorrectos vuelva a intentarlo en 1 mes.");
 }
- */

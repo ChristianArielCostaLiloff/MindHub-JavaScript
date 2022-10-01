@@ -1,1 +1,1 @@
-# Ejercicios de MindHub
+# Ejercicios de MindHub en JavaScript

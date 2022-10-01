@@ -202,27 +202,25 @@ if (prompt("Tiene entrada (si/no)").toLowerCase() === "si") {
   persona.entrada = false;
 }
 
-if (persona.entrada) {
-  if (prompt("Desea usar la entrada?").toLowerCase() === "no") {
-    persona.entrada = false;
-  }
-}
-
-if (
-  persona.nombre === "christian" ||
-  persona.pase === "vip" ||
-  persona.entrada === true
-) {
+if (persona.nombre === "christian" || persona.pase === "vip") {
   console.log("Bienvenido");
 } else {
-  if (prompt("Desea comprar una entrada? $1000").toLowerCase() === "si") {
-    if (parseInt(prompt("Ingrese el dinero disponible")) >= 1000) {
-      console.log("Se adquirio una entrada. Bienvenido");
+  if (persona.entrada === true) {
+    if (prompt("¿Desea usar la entrada?").toLowerCase() === "si") {
+      console.log("Bienvenido");
     } else {
-      console.log("No posee dinero suficiente");
+      console.log("No uso la entrada, no puede entrar.");
     }
   } else {
-    console.log("No adquirio una entrada, hasta la proxima");
+    if (prompt("Desea comprar una entrada? $1000").toLowerCase() === "si") {
+      if (parseInt(prompt("Ingrese el dinero disponible")) >= 1000) {
+        console.log("Se adquirio una entrada. Bienvenido");
+      } else {
+        console.log("No posee dinero suficiente");
+      }
+    } else {
+      console.log("No adquirio una entrada, hasta la proxima");
+    }
   }
 }
 
